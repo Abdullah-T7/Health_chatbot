@@ -3,7 +3,7 @@ from huggingface_hub import InferenceClient
 import os
 
 app = Flask(__name__)
-app.secret_key = "health_bot_secret"  # needed for session
+app.secret_key = os.getenv("FLASK_SECRET", "default_secret")
 
 
 client = InferenceClient(
