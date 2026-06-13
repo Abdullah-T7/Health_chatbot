@@ -6,6 +6,7 @@ app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET", "default_secret")
 
 
+
 client = InferenceClient(
   model="meta-llama/Llama-3.1-8B-Instruct",
   token=os.environ["HF_TOKEN"]
